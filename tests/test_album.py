@@ -32,6 +32,7 @@ class AlbumTestCase(unittest.TestCase):
         consulta2 = self.session.query(Album).filter(Album.id == 2).first()
         self.assertEqual(consulta1.titulo, titulo_album1)
         self.assertIsNotNone(consulta2)
+        self.assertIsNotNone(None)
 
     def test_editar_album(self):
         nueva_descripcion_album = self.data_factory.sentence()
